@@ -67,7 +67,6 @@ explore: orders {
   }
 }
 
-explore: sasha_derive_table {}
 
 explore: products {}
 
