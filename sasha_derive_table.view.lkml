@@ -3,7 +3,8 @@ view: sasha_derive_table {
    sql: SELECT
      order_items.id  AS 'id',
      COALESCE(SUM(order_items.sale_price ), 0) AS 'total_sales'
-    FROM demo_db.order_items ;;
+    FROM demo_db.order_items
+    Group by 1;;
  }
  dimension: id {
    primary_key: yes
@@ -17,7 +18,7 @@ view: sasha_derive_table {
    value_format: "$0"
  }
 
-measure: ave_sales {
+measure: ave_total_sales {
   type: average
   sql: ${total_sales} ;;
   value_format: "$0"

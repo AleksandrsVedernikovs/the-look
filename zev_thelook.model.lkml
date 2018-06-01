@@ -50,7 +50,7 @@ explore: order_items {
   join: sasha_derive_table {
     type: left_outer
     sql_on: ${order_items.id} = ${sasha_derive_table.id} ;;
-    relationship: one_to_one
+    relationship: many_to_one
   }
 }
 
